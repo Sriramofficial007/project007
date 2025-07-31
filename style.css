@@ -1,0 +1,652 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 5%;
+  z-index: 10;
+}
+
+.navbarfirst {
+  width: 100px;
+  height: 100%;
+}
+
+.netflixlogo {
+  width: 100%;
+  height: 100%;
+}
+
+.languagedropdown {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.languagedropdown:focus {
+  outline: none;
+}
+
+.languagedropdown option {
+  background-color: black;
+}
+
+.dropdowncontainer {
+  border: 1px solid white;
+  padding: 0.4rem;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.signinbutton {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.navbarnavitems {
+  display: flex;
+  gap: 10px;
+}
+
+.herobgimagecontainer {
+  width: 100%;
+  height: 80vh;
+}
+
+.herobgimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.herobgoverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 80vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.herocard {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.herotitle {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.herosubtitle,
+.herodescription {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.herodescription {
+  margin: 0 50px;
+}
+
+.emailinput {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding-left: 7px;
+}
+.emaillabel {
+  color: black;
+  position: absolute;
+  top: 28%;
+  left: 2%;
+  color: rgb(153, 149, 149);
+  transition: 0.5s;
+}
+
+.emailformcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.formcontainer {
+  background-color: white;
+  width: 90%;
+  height: 50px;
+  position: relative;
+}
+
+.emailinput:focus + .emaillabel {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.emailinput:not(:placeholder-shown).emailinput:not(:focus) + .emaillabel {
+  top: 0.2rem;
+  font-size: 10px;
+}
+
+.emailinput:focus-visible {
+  outline: none;
+}
+
+.primarybutton {
+  background-color: #dc030f;
+  border: 1px solid #dc030f;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 2px;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.feature {
+  border-top: 8px solid #222;
+  padding: 2rem 1rem;
+}
+
+.featuredetails {
+  text-align: center;
+}
+
+.featuretitle {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.featuresubtitle {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.featureimagecontainer {
+  width: 100%;
+  position: relative;
+}
+.featureimage {
+  width: 100%;
+}
+
+.featurebackgroudvideocontainer {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 13%;
+  height: 100%;
+  max-width: 73%;
+  max-height: 54%;
+  z-index: -2;
+}
+
+.featurebackgroudvideo {
+  width: 100%;
+}
+
+.feature2postercontainer {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 16em;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  height: 60px;
+  padding: 0.25rem 0.6rem;
+  gap: 15px;
+}
+
+.postercontainer {
+  width: 20%;
+}
+
+.poster {
+  width: 100%;
+  height: 100%;
+}
+.posterdetails {
+  width: 60%;
+}
+.posterdetails > h4 {
+  font-size: 13px;
+  font-weight: 500;
+}
+.posterdetails > h6 {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(63, 63, 246);
+}
+
+.downloadgifcontainer {
+  width: 20%;
+  height: 100%;
+}
+.gif {
+  width: 100%;
+  height: 100%;
+}
+
+.feature3backgroudvideocontainer {
+  max-width: 63%;
+  max-height: 47%;
+  z-index: -2;
+  top: 9%;
+  left: 19%;
+}
+
+.FAQaccordian {
+  width: 100%;
+}
+.FAQtitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 18px;
+  background-color: #303030;
+  border: 1px solid #303030;
+  color: white;
+}
+
+.FAQvisible {
+  background-color: #303030;
+  border-top: 1px solid black;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.FAQvisible > p {
+  margin: 1rem;
+}
+.FAQlistcontainer {
+  border-top: 8px solid #222;
+  padding: 2rem 0;
+}
+.FAQheading {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem 3rem;
+}
+
+.FAQlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.FAQgetstartedemail {
+  text-align: center;
+}
+
+.FAQgetstartedemail > h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 2rem 0;
+}
+
+footer {
+  border-top: 8px solid #333;
+  padding: 2rem 1rem;
+  color: #757575;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footerrow2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footerrow1 > h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footerrow3 > .dropdowncontainer {
+  width: fit-content;
+  border: 1px solid #757575;
+  color: #757575;
+}
+
+.footerrow3 > .dropdowncontainer > .languagedropdown {
+  color: #757575;
+}
+
+/* Login Modal Styles */
+.login-modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-modal-content {
+  background: #181818;
+  margin: auto;
+  padding: 30px 40px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 350px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-modal-content h2 {
+  margin-bottom: 20px;
+}
+.login-modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #333;
+  background: #222;
+  color: #fff;
+}
+.login-modal-content button {
+  width: 100%;
+  margin-top: 10px;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .login-modal-content {
+    padding: 20px 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .herobgimagecontainer {
+    height: 100vh;
+  }
+
+  .herobgoverlay {
+    height: 100vh;
+  }
+  .herocard {
+    top: 40%;
+    left: 30%;
+    transform: translate(-20%, -20%);
+  }
+  .herotitle {
+    font-size: 3rem;
+  }
+  .herosubtitle,
+  .herodescription {
+    font-size: 1.3rem;
+  }
+
+  .feature {
+    padding: 4rem;
+  }
+
+  .featuretitle {
+    font-size: 35px;
+  }
+
+  .featuresubtitle {
+    font-size: 20px;
+  }
+  .feature2postercontainer {
+    max-width: 26em;
+    height: 85px;
+  }
+  .postercontainer {
+    width: 15%;
+  }
+  .downloadgifcontainer {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .posterdetails > h4 {
+    font-size: 18px;
+  }
+  .posterdetails > h6 {
+    font-size: 14px;
+  }
+  .FAQtitle {
+    font-size: 20px;
+  }
+  .FAQheading {
+    font-size: 38px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+  .FAQlist {
+    padding: 1rem 5rem;
+  }
+  .FAQgetstartedemail {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(15%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2% 5%;
+  }
+
+  .navbarfirst {
+    width: 150px;
+  }
+
+  .signinbutton {
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  .dropdowncontainer {
+    padding: 10px 5px;
+  }
+
+  .navbarnavitems {
+    gap: 30px;
+  }
+
+  .herocard {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .formcontainer {
+    width: 50%;
+  }
+  .emailformcontainer {
+    flex-direction: row;
+    align-items: center;
+    gap: 1px;
+  }
+  .primarybutton {
+    height: 50px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .featuredetails {
+    text-align: left;
+    padding: 0 6rem;
+  }
+
+  .featuretitle {
+    font-size: 50px;
+  }
+
+  .featuresubtitle {
+    font-size: 25px;
+  }
+
+  .featureimagecontainer {
+    max-width: 500px;
+  }
+
+  .feature:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .feature2postercontainer {
+    max-width: 20em;
+    height: 100px;
+    padding: 1rem;
+  }
+  .postercontainer {
+    width: 20%;
+  }
+  .FAQlist {
+    padding: 1rem 25rem;
+  }
+  .FAQgetstartedemail {
+    transform: translateX(16%);
+  }
+  footer {
+    padding: 2rem 20rem;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footerrow2 {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .footerrow1,
+  .footerrow3,
+  .footerrow4 {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1254px) {
+}
+
+/* Movie Gallery Styles */
+.movie-gallery {
+  background: #111;
+  padding: 40px 0;
+  text-align: center;
+}
+.gallery-title {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.movies-genre-section h3 {
+  color: #dc030f;
+  margin: 40px 0 20px 0;
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 5vw;
+}
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.movie-card {
+  background: #222;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-card img {
+  width: 180px;
+  height: 270px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+.movie-card h4 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.watch-btn {
+  background: #dc030f;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.watch-btn:hover {
+  background: #a3000b;
+}
+@media (max-width: 900px) {
+  .movies-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movies-genre-section h3 {
+    text-align: center;
+    padding-left: 0;
+  }
+}
